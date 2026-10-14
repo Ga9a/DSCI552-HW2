@@ -27,3 +27,14 @@ Parts (h)-(j) share a 70/30 split with `random_state=42`.
 KNN normalization uses training-set minima and maxima.
 
 AI assistance is documented at the end of the notebook.
+
+## Reproducibility checks
+
+Use Python 3.12 with the pinned dependencies. The submitted notebook preserves its recorded analysis; the verification script checks notebook structure and saved errors without changing it.
+
+```sh
+python scripts/verify_notebook.py
+python scripts/verify_notebook.py --execute
+```
+
+Execution uses the notebook directory as its working directory, so dataset paths resolve consistently. Run the command in the environment where the requirements were installed. CI reruns all code cells on a clean checkout. Generated results written by notebook code may be refreshed during execution.
